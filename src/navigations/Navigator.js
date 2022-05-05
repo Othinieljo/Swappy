@@ -22,7 +22,23 @@ const IdentificationScreen = () =>
           <Stack.Screen name="Photos" component={Photos} />
           <Stack.Screen name="Video" component={Video} />
           <Stack.Screen name="Music" component={Music} />
-          <Stack.Screen name="Mes notes" component={Note} />
+          <Stack.Screen name="Mes notes" component={Note} 
+          options={{
+            
+            headerStyle: {
+              backgroundColor: '#EBEEEF',
+              
+              
+            },
+            headerTintColor: '#1E2285', 
+            headerTitleStyle: {
+                fontFamily:"ArialRoundedMT",
+                fontWeight:"bold",
+                fontSize:25,
+
+
+              }
+               }  } />
           </Stack.Navigator>
         
     );

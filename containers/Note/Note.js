@@ -8,12 +8,21 @@ export default function Note() {
             <Image
             style ={styles.Img}
             source = {require('./../../assets/search.png')} >
+                </Image><Image
+            style ={styles.Img1}
+            source = {require('./../../assets/ellipsis.png')} >
+                </Image>
+                <Image
+            style ={styles.Img2}
+            source = {require('./../../assets/settings.png')} >
+                </Image>
+                <Image
+            style ={styles.Img3}
+            source = {require('./../../assets/plus.png')} >
                 </Image>
             
-            <Not Nom = "Assinie"/>
-            <Not Nom = "Yamoussoukro"/>
-            <Not Nom = "Man"/>
-      
+            <Not />
+            
           
          
      
@@ -27,7 +36,31 @@ const styles = StyleSheet.create({
          backgroundColor : "#0D0F4A",
      },
      Img : {
-         top:-100
+         height:30,
+         width:30,
+         marginLeft:320,
+         top:24
+
+
+     },
+     Img1 : {
+         height:30,
+         width:30,
+         top:-5,
+         marginLeft:385
+     },
+     Img2 : {
+         height:30,
+         width:30,
+         top:-37,
+         marginLeft:10
+     },
+     Img3 : {
+         height:50,
+         width:50,
+         top:520,
+         marginLeft:350
+
      }
      
      

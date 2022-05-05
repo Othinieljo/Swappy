@@ -1,32 +1,95 @@
-import { View,Text,StyleSheet } from "react-native";
+import { StyleSheet,    SafeAreaView, FlatList,View,Text} from "react-native";
 
 
-export default function Not({Nom}){
-    return (
-        <View style = {styles.container}>
-            <Text style = {styles.text} > {Nom} </Text>
-
-        </View>
+const DATA = [
+    {
+      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+      title:"Assinie"
+      
+    },
+    {
+      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+      title:"Yamoussokro"
+      
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d72',
+      title:"Man"
+      
+    },
+    {
+        id: '58694a0f-3da1-471f-bd96-145571e29d73',
+        title:"Man"
+        
+      },
+      {
+        id: '58694a0f-3da1-471f-bd96-145571e29d74',
+        title:"Man"
+        
+      },
+      {
+        id: '58694a0f-3da1-471f-bd96-145571e29d75',
+        title:"Man"
+        
+      },
+      {
+        id: '58694a0f-3da1-471f-bd96-145571e29d76',
+        title:"Man"
+        
+      },
+  ];
+  
+  const Item = ({ title }) => (
+    <View style={styles.item}>
+      <Text style={styles.title}>{title}</Text>
+    </View>
+    );
+export default function Not() {
+    const renderItem = ({ item }) => (
+        <Item title={item.title} /> )
+    return(
+        
+           
+        
+            <SafeAreaView style = {styles.container} >
+                <FlatList
+                
+                numColumns={1}
+                data={DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+    
+                />
+    
+            </SafeAreaView>
+        
+        
     )
 }
 
 const styles = StyleSheet.create({
     container : {
-    backgroundColor : '#FFFFFF',
-    top:80,
-    height:90,
-    borderRadius:36,
-    marginBottom:32
-    },
-    text : {
-        fontFamily:'ArialRoundedMT',
-        fontSize:25,
-        marginTop:23,
-        marginLeft:15,
         
-        
-        
-        
-    }
+        top:3,
+        marginTop:20,
+        height:346
 
-})
+    },
+    item: {
+        backgroundColor: '#ffffff',
+        marginLeft:1,
+        borderRadius:35,
+        marginBottom:23,
+        borderColor:"#707070",
+        borderWidth: 1,
+        width:410,
+        height:100,
+        justifyContent:"center"
+      },
+      title :{
+          fontFamily:"ArialRoundedMT",
+          fontSize:25,
+          marginLeft:40
+      }
+
+          }  )
